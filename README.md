@@ -121,7 +121,7 @@ Trained on sequences of 60 time steps.
 
 
 ### 📉 Loss Over Epochs
-![Loss Over Epochs](images/loss_ovre_epochs.png)
+![Loss Over Epochs](images/loss_over_epochs.png)
 
 ---
 
