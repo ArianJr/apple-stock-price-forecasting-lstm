@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="images/apple_stock_price_thumbnail.jpg" alt="Apple Stock Price">
+</p>
+
 # 🍎 Apple Stock Price Forecasting with LSTM
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)  
