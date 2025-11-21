@@ -87,6 +87,21 @@ The forecasting model is built using a Long Short-Term Memory (LSTM) neural netw
   - Loss Function: Mean Squared Error (MSE) — well-suited for regression and time-series prediction.
   - Optimizer: Adam — commonly used for its good convergence behavior.
 
+
+### Model Summary
+
+| Layer (type)       | Output Shape     | Param #  |
+|--------------------|------------------|----------|
+| LSTM               | (None, 60, 300)  | 362,400  |
+| Dropout            | (None, 60, 300)  | 0        |
+| LSTM               | (None, 60, 100)  | 160,400  |
+| Dropout            | (None, 60, 100)  | 0        |
+| LSTM               | (None, 60, 100)  | 80,400   |
+| Dropout            | (None, 60, 100)  | 0        |
+| LSTM               | (None, 100)      | 80,400   |
+| Dropout            | (None, 100)      | 0        |
+| Dense              | (None, 1)        | 101      |
+
 ---
 
 ## 📊 Results
