@@ -149,7 +149,7 @@ Trained on sequences of 60 time steps.
 - NumPy & Pandas
 - Matplotlib & Seaborn
 - Scikit-learn
-- 
+
 ---
 
 ## 📂 Repository Structure
