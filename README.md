@@ -117,11 +117,11 @@ Trained on sequences of 60 time steps.
 
 ### 📉 Apple Stock Price: Actual vs Predicted
 
-![Actual vs Predicted Apple Stock Price](images/actual_vs_predicted_apple_stock_price)
+![Actual vs Predicted Apple Stock Price](images/actual_vs_predicted_apple_stock_price.png)
 
 
 ### 📉 Loss Over Epochs
-![Loss Over Epochs](images/loss_ovre_epochs)
+![Loss Over Epochs](images/loss_ovre_epochs.png)
 
 ---
 
