@@ -11,6 +11,31 @@
 
 ---
 
+## Table of Contents
+
+1. [Project Overview](#project-overview)  
+2. [Key Features](#key-features)  
+3. [Architecture Overview](#architecture-overview)  
+4. [Model Architecture](#model-architecture)  
+5. [Technologies Used](#technologies-used)  
+6. [Repository Structure](#repository-structure)  
+7. [Results](#results)  
+   1. [Apple Stock Price: Actual vs Predicted](#apple-stock-price-actual-vs-predicted)  
+   2. [Loss Over Epochs](#loss-over-epochs)  
+8. [Evaluation Metric](#evaluation-metric)  
+9. [Getting Started](#getting-started)  
+   1. [Prerequisites](#prerequisites)  
+   2. [Installation](#installation)  
+   3. [Running the Notebook](#running-the-notebook)  
+10. [Dataset Source](#dataset-source)  
+11. [Future Improvements](#future-improvements)  
+12. [Customization & Extensions](#customization--extensions)  
+13. [Acknowledgements](#acknowledgements)  
+14. [License](#license)  
+15. [Author](#author)  
+
+---
+
 This project uses a **Long Short-Term Memory (LSTM)** neural network to predict Apple Inc. (AAPL) stock closing prices from historical data.  
 It demonstrates how **deep learning can be applied to time-series financial forecasting** in a reproducible, end-to-end pipeline.
 
