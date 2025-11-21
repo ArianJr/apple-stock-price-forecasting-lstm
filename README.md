@@ -57,6 +57,15 @@ Historical Stock Data → Data Preprocessing → Sequence Generation → LSTM Mo
 
 The forecasting model is built using a Long Short-Term Memory (LSTM) neural network. Here's a breakdown of the architecture used in the notebook:
 
+A multi-layer LSTM model including:
+- LSTM layers
+- Dropout
+- Dense output layer
+- Mean Squared Error (MSE) loss
+- Adam optimizer
+
+Trained on sequences of 60 time steps.
+
 - Input Layer
   - The model takes sequences of past 60 days of normalized closing price data (window length), forming the input shape (sequence_length, 1).
 - LSTM Layers
@@ -123,19 +132,6 @@ The forecasting model is built using a Long Short-Term Memory (LSTM) neural netw
 - NumPy & Pandas
 - Matplotlib & Seaborn
 - Scikit-learn
-
----
-
-## 🧪 Model Architecture
-
-A multi-layer LSTM model including:
-- LSTM layers
-- Dropout
-- Dense output layer
-- Mean Squared Error (MSE) loss
-- Adam optimizer
-
-Trained on sequences of 60 time steps.
 
 ---
 
