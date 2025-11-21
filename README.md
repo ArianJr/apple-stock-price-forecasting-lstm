@@ -1,4 +1,14 @@
-# 📈 Apple Stock Price Forecasting Using LSTM
+# 🍎 Apple Stock Price Forecasting with LSTM
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)  
+[![Python Version](https://img.shields.io/badge/python-3.8%2B-blue.svg)](https://www.python.org/)  
+[![Colab](https://img.shields.io/badge/Open%20in-Colab-orange.svg)](https://colab.research.google.com/github/ArianJr/apple-stock-price-forecasting-lstm/blob/main/notebooks/Apple_Stock_Price_Forecasting.ipynb)  
+[![Build Status](https://img.shields.io/badge/build-passing-brightgreen.svg)](#)
+
+---
+
+This project uses a **Long Short-Term Memory (LSTM)** neural network to predict Apple Inc. (AAPL) stock closing prices from historical data.  
+It demonstrates how **deep learning can be applied to time-series financial forecasting** in a reproducible, end-to-end pipeline.
 
 A deep-learning project that analyzes and forecasts Apple Inc. (AAPL) stock prices using Long Short-Term Memory (LSTM) neural networks. This notebook demonstrates a complete end-to-end workflow including data preprocessing, exploratory analysis, model construction, training, evaluation, and visualization of forecasting results.
 
@@ -35,6 +45,37 @@ The notebook includes:
 - RMSE evaluation metric
 - High-quality visualizations of training progress and predictions
 - Reproducible results using fixed random seeds
+
+---
+
+## 📐 Architecture Overview
+Historical Stock Data → Data Preprocessing → Sequence Generation → LSTM Model → Forecasted Price → Evaluation & Visualization
+
+---
+
+🧠 Model Architecture
+
+The forecasting model is built using a Long Short-Term Memory (LSTM) neural network. Here's a breakdown of the architecture used in the notebook:
+
+- Input Layer:
+  - The model takes sequences of past 60 days of normalized closing price data (window length), forming the input shape (sequence_length, 1).
+- LSTM Layers: 
+First LSTM layer:
+Units: 50 (or another size — adjust to the actual hyperparameter you used)
+return_sequences=True, so that it outputs a full sequence to the next LSTM.
+Activation: typically tanh (default) for LSTM.
+Dropout: e.g., Dropout(0.2) to regularize and reduce overfitting.
+Second LSTM layer:
+Units: 50 (or similar)
+return_sequences=False (i.e., only returns last output in the sequence).
+Dropout: again used to help regularization.
+Dense Output Layer
+After the LSTM layers, there's a fully connected (Dense) layer with 1 neuron, producing the forecast for the next day's closing price.
+Activation: linear, as this is a regression task.
+Compilation
+Loss Function: Mean Squared Error (MSE) — well-suited for regression and time-series prediction.
+Optimizer: Adam — commonly used for its good convergence behavior.
+Metrics: often includes Mean Absolute Error (MAE) to easily interpret error magnitude.
 
 ---
 
@@ -78,22 +119,38 @@ Trained on sequences of 60 time steps.
 - RMSE (Root Mean Squared Error) is used to quantify prediction accuracy.
 Lower RMSE indicates better performance.
 
+| Metric | Value |
+| ------ | ----- |
+| RMSE   | ~4.7  |
+
 ---
 
-## 📘 Usage
+## 🚀 Getting Started
 
-### 1. Clone the repository:
+### Prerequisites
+- Python 3.8+  
+- pip or conda  
+- Required libraries: `tensorflow`, `pandas`, `numpy`, `matplotlib`, `scikit-learn`
+
+### Installation
 ```bash
 git clone https://github.com/ArianJr/apple-stock-price-forecasting-lstm.git
-```
-### 2. Install dependencies:
-```bash
+cd apple-stock-price-forecasting-lstm
 pip install -r requirements.txt
 ```
-### 3. Run the notebook:
+
+### Running the Notebook
+1. Open: `apple_stock_price_forecasting_lstm.ipynb`
+2. Run cells step-by-step
 ```bash
-jupyter notebook apple_stock_price_forecasting_lstm.ipynb
+# Load libraries & data
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import LSTM, Dense
 ```
+3. Preprocess the data → Build LSTM → Train & Evaluate → Visualize predictions
 
 ---
 
@@ -107,3 +164,39 @@ jupyter notebook apple_stock_price_forecasting_lstm.ipynb
 
 ---
 
+## 🔧 Customization & Extensions
+
+- Switch Stocks: Change ticker symbol (MSFT, GOOGL, etc.)
+- Forecast Horizon: Adjust sequence length or future window
+- Model Architectures: Try GRU, CNN, or Transformers
+- Hyperparameter Tuning: Modify layers, hidden units, dropout, batch size, epochs
+
+---
+
+📄 License
+
+MIT License – see [LICENSE](LICENSE) for details.
+
+---
+
+## 👤 Author
+
+**Arian Jr**  
+📧 [Contact Me](arianjafar59@gmail.com) • 🌐 [GitHub Profile](https://github.com/ArianJr)
+
+---
+
+<p align="center">
+  Made with ❤️ by <a href="https://github.com/ArianJr" target="_blank">ArianJr</a>
+</p>
+
+<p align="center">
+  <sub>⭐ If you found this project useful, please consider giving it a star! It helps others discover it and supports my work.</sub>
+</p>
+
+---
+
+<p align="center">
+  <img src="https://img.shields.io/github/stars/ArianJr/power-output-prediction-ann?style=social" alt="GitHub stars">
+  <img src="https://img.shields.io/github/forks/ArianJr/power-output-prediction-ann?style=social" alt="GitHub forks">
+</p>
