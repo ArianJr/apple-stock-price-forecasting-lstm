@@ -53,7 +53,7 @@ Historical Stock Data → Data Preprocessing → Sequence Generation → LSTM Mo
 
 ---
 
-🧠 Model Architecture
+## 🧠 Model Architecture
 
 The forecasting model is built using a Long Short-Term Memory (LSTM) neural network. Here's a breakdown of the architecture used in the notebook:
 
