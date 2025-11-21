@@ -57,25 +57,35 @@ Historical Stock Data → Data Preprocessing → Sequence Generation → LSTM Mo
 
 The forecasting model is built using a Long Short-Term Memory (LSTM) neural network. Here's a breakdown of the architecture used in the notebook:
 
-- Input Layer:
+- Input Layer
   - The model takes sequences of past 60 days of normalized closing price data (window length), forming the input shape (sequence_length, 1).
-- LSTM Layers: 
-First LSTM layer:
-Units: 50 (or another size — adjust to the actual hyperparameter you used)
-return_sequences=True, so that it outputs a full sequence to the next LSTM.
-Activation: typically tanh (default) for LSTM.
-Dropout: e.g., Dropout(0.2) to regularize and reduce overfitting.
-Second LSTM layer:
-Units: 50 (or similar)
-return_sequences=False (i.e., only returns last output in the sequence).
-Dropout: again used to help regularization.
-Dense Output Layer
-After the LSTM layers, there's a fully connected (Dense) layer with 1 neuron, producing the forecast for the next day's closing price.
-Activation: linear, as this is a regression task.
-Compilation
-Loss Function: Mean Squared Error (MSE) — well-suited for regression and time-series prediction.
-Optimizer: Adam — commonly used for its good convergence behavior.
-Metrics: often includes Mean Absolute Error (MAE) to easily interpret error magnitude.
+- LSTM Layers
+  - First LSTM layer
+    - Units: 300 
+    - return_sequences=True, so that it outputs a full sequence to the next LSTM.
+    - Activation: typically tanh (default) for LSTM.
+    - Dropout: e.g., Dropout(0.2) to regularize and reduce overfitting.
+  - Second LSTM layer
+    - Units: 100 
+    - return_sequences=True
+    - Activation: tanh
+    - Dropout: 0.2
+  - Third LSTM layer
+    - Units: 100 
+    - return_sequences=True
+    - Activation: tanh
+    - Dropout: 0.2
+  - Forth LSTM
+    - Units: 100 
+    - return_sequences=False
+    - Activation: tanh
+    - Dropout: 0.2
+- Dense Output Layer
+  - After the LSTM layers, there's a fully connected (Dense) layer with 1 neuron, producing the forecast for the next day's closing price.
+  - Activation: linear, as this is a regression task.
+- Compilation
+  - Loss Function: Mean Squared Error (MSE) — well-suited for regression and time-series prediction.
+  - Optimizer: Adam — commonly used for its good convergence behavior.
 
 ---
 
