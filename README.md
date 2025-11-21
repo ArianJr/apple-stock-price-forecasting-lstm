@@ -36,7 +36,7 @@ The notebook includes:
 
 ---
 
-🧠 Key Features
+## ⚡ Key Features
 
 - End-to-end deep learning pipeline using TensorFlow/Keras
 - Historical Apple stock data preprocessing
@@ -179,6 +179,18 @@ from tensorflow.keras.layers import LSTM, Dense
 
 ---
 
+## 📦 Dataset Source
+
+This project uses the [Apple Stock (2013–2018) dataset](https://www.kaggle.com/datasets/soheiltehranipour/apple-stock-20132018/data) by Soheil Tehranipour on Kaggle.
+
+**Fields Used:**  
+- `Date`: Trading date  
+- `Open`: Opening price of Apple stock
+
+**Note:** This dataset contains only two columns and may require augmentation for multi-feature modeling.
+
+---
+
 ## 📚 Future Improvements
 
 - Incorporating OHLCV input features
@@ -198,7 +210,7 @@ from tensorflow.keras.layers import LSTM, Dense
 
 ---
 
-📄 License
+## 📄 License
 
 MIT License – see [LICENSE](LICENSE) for details.
 
