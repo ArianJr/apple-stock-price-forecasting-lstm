@@ -117,6 +117,30 @@ Trained on sequences of 60 time steps.
 
 ---
 
+## 🛠 Technologies Used
+
+- Python 3.x
+- TensorFlow / Keras
+- NumPy & Pandas
+- Matplotlib & Seaborn
+- Scikit-learn
+- 
+---
+
+## 📂 Repository Structure
+
+|    Path     | Type | Purpose |
+|-------------|------|---------|
+| `dataset/` | Folder | Contains Apple stock dataset (2013–2018) used for training and evaluation |
+| `images/` | Folder | Stores visualization outputs such as actual vs predicted plots and loss curves |
+| `.gitignore` | File | Specifies files and directories to be ignored by Git |
+| `LICENSE` | File | MIT License for the project, defining usage rights |
+| `README.md` | File | Documentation explaining project overview, architecture, dataset source, and usage instructions |
+| `apple_stock_price_forecasting_lstm.ipynb` | Jupyter Notebook | Main notebook implementing preprocessing, LSTM model training, evaluation, and visualization |
+| `requirements.txt` | File | Lists Python dependencies for reproducibility |
+
+---
+
 ## 📊 Results
 
 ### 📉 Apple Stock Price: Actual vs Predicted
@@ -126,16 +150,6 @@ Trained on sequences of 60 time steps.
 
 ### 📉 Loss Over Epochs
 ![Loss Over Epochs](images/loss_over_epochs.png)
-
----
-
-## 🛠 Technologies Used
-
-- Python 3.x
-- TensorFlow / Keras
-- NumPy & Pandas
-- Matplotlib & Seaborn
-- Scikit-learn
 
 ---
 
