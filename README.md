@@ -208,8 +208,7 @@ This project uses the [Apple Stock (2013–2018) dataset](https://www.kaggle.com
 
 ## 🙏 Acknowledgements
 
-- Thanks to **soheiltehranipour** for the Apple stock dataset (2013–2018) on Kaggle:  
-  https://www.kaggle.com/datasets/soheiltehranipour/apple-stock-20132018/data  
+- Thanks to **soheiltehranipour** for the Apple stock dataset (2013–2018) on Kaggle: [Apple Stock (2013–2018) dataset](https://www.kaggle.com/datasets/soheiltehranipour/apple-stock-20132018/data)
 - Inspired by numerous open‑source time-series forecasting repositories and tutorials — your work paved the way!  
 - Built with help from the TensorFlow / Keras community — especially for LSTM guidance and best practices.  
 - Thanks to all readers and contributors who test, critique, or improve this project.
